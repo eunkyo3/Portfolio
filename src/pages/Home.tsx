@@ -1,5 +1,4 @@
 import { profile } from '../data/content'
-import { useI18n } from '../contexts/I18nContext'
 import { About } from './About'
 import { Experience } from './Experience'
 import { Projects } from './Projects'
@@ -9,7 +8,6 @@ import { Activities } from './Activities'
 import { Reveal } from '../components/Reveal'
 
 export function Home() {
-  const { t } = useI18n()
   return (
     <>
       <section id="home" className="relative space-y-12">
