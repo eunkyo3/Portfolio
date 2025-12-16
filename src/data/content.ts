@@ -65,6 +65,13 @@ export const projects = [
     tech: ['Python', 'OpenVINO', 'Open Model Zoo', 'OpenCV', 'Jupyter Notebook'],
     repo: 'https://github.com/eunkyo3/face-recognition',
   },
+  {
+    title: '학교 급식 정보 카카오톡 자동 전송 시스템',
+    description:
+      '교육부 NEIS(Open API)에서 학교 급식 정보를 조회하여 카카오톡 나에게 메시지로 매일 아침 자동 전송하는 파이썬 스크립트입니다. NEIS API 연동으로 급식 메뉴를 가져오고, 카카오톡 OAuth 인증을 통해 액세스 토큰을 관리하며, schedule 라이브러리를 활용해 매일 08:30에 자동으로 급식 정보를 전송합니다. 환경변수를 통한 API 키 관리와 토큰 자동 갱신 기능을 포함하고 있습니다.',
+    tech: ['Python', 'NEIS API', '카카오톡 API', 'OAuth', 'schedule', 'requests'],
+    repo: 'https://github.com/eunkyo3/python_meals_to_kakao',
+  },
 ]
 
 export const skills = {
