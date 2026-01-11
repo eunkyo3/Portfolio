@@ -65,6 +65,13 @@ export const projects = [
     tech: ['Python', 'OpenVINO', 'Open Model Zoo', 'OpenCV', 'Jupyter Notebook'],
     repo: 'https://github.com/eunkyo3/face-recognition',
   },
+  {
+    title: 'AI Video Studio – 실사 스타일 영상 생성',
+    description:
+      'RTX 3060 Ti 로컬 환경에서 실사(Photorealistic) 스타일의 동영상을 생성하기 위해 최적화된 올인원 솔루션입니다. Streamlit 기반의 GUI를 제공하며, AnimateDiff(생성), Motion LoRA(카메라 무빙), RIFE(보간), Real-ESRGAN(업스케일링) 기술이 파이프라인으로 연결되어 있습니다. 텍스트 프롬프트 입력부터 고화질 영상 파일 생성까지의 전 과정을 자동화하여, VRAM 8GB 한계를 극복하기 위한 CPU Offload 최적화를 적용했습니다.',
+    tech: ['Python', 'Streamlit', 'Diffusers', 'AnimateDiff', 'Motion LoRA', 'RIFE', 'Real-ESRGAN', 'FFmpeg', 'PyTorch'],
+    repo: 'https://github.com/eunkyo3/gen-ai-video',
+  },
 ]
 
 export const skills = {
@@ -115,7 +122,7 @@ export const awards = [
   },
   {
     title: '화이트해커 경진대회 – 입상',
-    detail: '2023.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 입상',
+    detail: '2023.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 CTF 문제를 해결하여 입상',
   },
   {
     title: '2024 지방기능경기대회 클라우드컴퓨팅(AWS)',
@@ -123,7 +130,7 @@ export const awards = [
   },
   {
     title: '화이트해커 경진대회 – 우수상',
-    detail: '2024.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 우수상 수상',
+    detail: '2024.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 CTF 문제를 해결하여 우수상 수상',
   },
   {
     title: 'AI Youth Challenge – 교육부 장관상',
@@ -132,6 +139,10 @@ export const awards = [
   {
     title: '디지털새싹 인공지능 메이커톤 – 어벤져스상(최우수상)',
     detail: '2024.12 · 화성시인재육성재단 / 동탄중앙이음터 · 디지털새싹 인공지능 메이커톤에서 기존 SignGPT 성능 및 UI 개선하여 어벤져스상(최우수상) 수상',
+  },
+  {
+    title: '사이드임팩트 AI 트랙 - 우수 선정팀',
+    detail: '2026.01 · 브라이언 임팩트 · 사이드임팩트 AI 트랙에서 SignGPT 기능 개선으로 우수 선정팀에 선정되었습니다. 주요 개선 내용으로는 UI 개편, 호버 시 수어 출력, 일반인과 농인의 대화 기능 추가, 미국 수어 지원 추가',
   },
 ]
 
