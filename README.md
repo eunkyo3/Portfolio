@@ -29,7 +29,9 @@ AI와 데이터를 연결하는 백엔드 개발자 **정은교**의 포트폴�
   - **메모 관리 웹 애플리케이션 (Java)** – Gradle 기반 Java 웹 앱 ([코드](https://github.com/eunkyo3/memo))  
   - **Flutter 앱 모음 포트폴리오** – 다양한 플러터 앱 데모 모음 ([사이트](https://eunkyo3.github.io/))  
   - **Vue 기반 개인 포트폴리오 웹사이트** – Vue 3 + Vite + Tailwind CSS로 구현 중인 포트폴리오 ([코드](https://github.com/eunkyo3/Portfolio))  
-  - **BrainAI – OpenVINO 얼굴·나이·성별·감정 인식** – OpenVINO와 Open Model Zoo 모델을 활용한 Vision 기반 AI 실습 ([코드](https://github.com/eunkyo3/face-recognition))
+  - **BrainAI – OpenVINO 얼굴·나이·성별·감정 인식** – OpenVINO와 Open Model Zoo 모델을 활용한 Vision 기반 AI 실습 ([코드](https://github.com/eunkyo3/face-recognition))  
+  - **AI Video Studio – 실사 스타일 영상 생성** – RTX 3060 Ti 환경에서 AnimateDiff, Motion LoRA, RIFE, Real-ESRGAN을 파이프라인으로 연결한 영상 생성 솔루션 ([코드](https://github.com/eunkyo3/gen-ai-video))  
+  - **학교 급식 정보 카카오톡 자동 전송 시스템** – NEIS API와 카카오톡 OAuth를 활용한 급식 정보 자동 전송 스크립트 ([코드](https://github.com/eunkyo3/python_meals_to_kakao))
 
 - **Skills**  
   - Client Side: React, Vue, JavaScript / Flutter, Dart  
@@ -41,8 +43,11 @@ AI와 데이터를 연결하는 백엔드 개발자 **정은교**의 포트폴�
 - **Certificates / Activities**  
   - 정보처리기능사, 정보처리산업기사, SQLD, 웹디자인개발기능사, SW개발_L3_22V2  
   - 사이버가디언즈, 화이트해커 양성교육(2023, 2024), AI 슈퍼컴퓨터 청소년 캠프  
-  - AI Youth Challenge – 교육부 장관상(청각장애인 수어 통역 서비스 SignGPT)  
-  - 디지털새싹 인공지능 메이커톤 – 어벤져스상(최우수상, SignGPT 고도화)
+  - 화이트해커 경진대회 – 입상(2023.11, CTF 문제 해결)  
+  - 화이트해커 경진대회 – 우수상(2024.11, CTF 문제 해결)  
+  - AI Youth Challenge – 교육부 장관상(2024.07~08, 청각장애인 수어 통역 서비스 SignGPT)  
+  - 디지털새싹 인공지능 메이커톤 – 어벤져스상(최우수상, 2024.12, SignGPT 고도화)  
+  - 사이드임팩트 AI 트랙 - 우수 선정팀(2026.01, 브라이언 임팩트, SignGPT 기능 개선 - UI 개편, 호버 시 수어 출력, 일반인과 농인 대화 기능, 미국 수어 지원 추가)
 
 ---
 
