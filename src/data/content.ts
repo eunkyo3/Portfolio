@@ -79,6 +79,34 @@ export const projects = [
     tech: ['Python', 'NEIS API', '카카오톡 API', 'OAuth', 'schedule', 'requests'],
     repo: 'https://github.com/eunkyo3/python_meals_to_kakao',
   },
+  {
+    title: 'Synapse Commerce – 하이브리드 커머스 검색·재고 관리 플랫폼',
+    description:
+      'NestJS 기반 CQRS·이벤트 드리븐 아키텍처로 설계된 커머스 검색·재고 관리 플랫폼입니다. PostgreSQL을 쓰기 DB, Elasticsearch를 읽기 DB로 분리해 상품 검색 성능을 최적화하고, Redis를 캐시·레이트 리미팅·세션 스토어로 활용해 고가용성을 목표로 합니다.',
+    tech: ['NestJS', 'TypeScript', 'PostgreSQL', 'Elasticsearch', 'Redis', 'CQRS', 'Docker'],
+    repo: 'https://github.com/eunkyo3/Synapse-Commerce',
+  },
+  {
+    title: 'MediScan – 시니어 친화형 알약 인식 앱',
+    description:
+      '60~80대 시니어를 위한 알약 인식 모바일 앱으로, 카메라로 촬영한 알약을 YOLOv8·OCR로 인식해 Spring Boot 서버에서 약 정보(API)를 조회합니다. 큰 글씨, 음성 안내(TTS), 최근 검색 기록, 다중 알약 인식 등 실버 UX에 최적화된 플로우를 설계했습니다.',
+    tech: ['Flutter', 'Dart', 'Riverpod', 'GoRouter', 'Spring Boot API', 'SharedPreferences', 'TFLite', 'YOLOv8', 'OCR'],
+    repo: 'https://github.com/eunkyo3/medi-scan-client',
+  },
+  {
+    title: 'MediScan AI Model Training (YOLOv8)',
+    description:
+      'MediScan 앱의 핵심인 알약 탐지 모델을 YOLOv8 Nano 기반으로 파인튜닝하고, 모바일 배포를 위해 TFLite(.tflite) 포맷으로 내보내는 학습 파이프라인입니다. Roboflow에서 받은 알약 데이터셋을 사용하며, GPU(CUDA) 환경에서의 학습과 모델 경량화에 초점을 맞추고 있습니다.',
+    tech: ['Python', 'YOLOv8', 'Ultralytics', 'PyTorch', 'TensorFlow Lite', 'Roboflow'],
+    repo: 'https://github.com/eunkyo3/medi-scan-ai-model-training-YOLOv8',
+  },
+  {
+    title: 'MediScan Server – 알약 식별 Spring Boot API',
+    description:
+      '식약처 의약품 식별 공공데이터를 동기화해 알약 식별 검색 API를 제공하는 Spring Boot 서버입니다. 문자 식별값(print), 모양, 색상 기준으로 약 정보를 조회할 수 있고, H2/PostgreSQL을 지원하며 OpenFeign으로 공공데이터 API를 연동했습니다. MediScan 모바일 앱의 백엔드로 동작합니다.',
+    tech: ['Java', 'Spring Boot', 'H2', 'PostgreSQL', 'OpenFeign', 'Gradle'],
+    repo: 'https://github.com/eunkyo3/medi-scan-server',
+  },
 ]
 
 export const skills = {

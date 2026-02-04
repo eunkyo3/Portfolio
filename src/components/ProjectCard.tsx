@@ -16,7 +16,7 @@ export function ProjectCard({ title, description, tech, link, repo }: ProjectCar
         <div className="flex gap-3 text-sm">
           {link && (
             <a
-              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap"
               href={link}
               target="_blank"
               rel="noreferrer"
@@ -26,7 +26,7 @@ export function ProjectCard({ title, description, tech, link, repo }: ProjectCar
           )}
           {repo && (
             <a
-              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap"
               href={repo}
               target="_blank"
               rel="noreferrer"
