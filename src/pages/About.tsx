@@ -23,6 +23,10 @@ export function About() {
               <dd className="text-right font-semibold text-neutral-900 dark:text-neutral-50">{profile.name}</dd>
             </div>
             <div className="flex justify-between gap-3">
+              <dt className="font-medium text-neutral-500 dark:text-neutral-400">생년월일</dt>
+              <dd className="text-right text-neutral-900 dark:text-neutral-50">{profile.birthDate}</dd>
+            </div>
+            <div className="flex justify-between gap-3">
               <dt className="font-medium text-neutral-500 dark:text-neutral-400">포지션</dt>
               <dd className="text-right text-neutral-900 dark:text-neutral-50">백엔드 개발자</dd>
             </div>

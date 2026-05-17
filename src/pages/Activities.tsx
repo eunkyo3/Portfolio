@@ -8,7 +8,7 @@ export function Activities() {
         <p className="text-xs font-medium tracking-wide text-blue-600 dark:text-blue-400 uppercase">
           Activities
         </p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">보안 · 클라우드 · AI 대외활동 & 수상</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">대외활동 & 수상</h2>
       </div>
       {/* 대외활동 */}
       <section className="space-y-4">

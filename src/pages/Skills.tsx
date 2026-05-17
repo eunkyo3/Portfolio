@@ -76,7 +76,7 @@ export function Skills() {
           <div className="space-y-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-semibold text-neutral-900 dark:text-neutral-100">Deployment</span>
-              <SkillBadge label="AWS (ECS, EB, 인프라 구축)" />
+              <SkillBadge label="AWS (Lightsail, S3, EC2, VPC)" />
               <SkillBadge label="Vercel" />
             </div>
             <div className="flex flex-wrap items-center gap-2">

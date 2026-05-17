@@ -1,5 +1,6 @@
 export const profile = {
   name: '정은교',
+  birthDate: '2006.02.09',
   role: 'AI와 데이터를 연결하는 백엔드 개발자',
   summary:
     '어린 시절 접한 컴퓨터 게임을 통해 소프트웨어의 세계에 눈을 떴고, 자연스럽게 개발자라는 꿈을 키우게 되었습니다. 특성화 고등학교 진학 후 마주한 개발의 세계는 낯설고 어려웠지만, 하나하나 문제를 해결해 나가는 과정에서 깊은 성취감과 재미를 느꼈습니다. 특히 보이지 않는 곳에서 데이터를 제어하여 사용자에게 편의를 제공하는 백엔드 분야에 매력을 느꼈습니다. 현재는 탄탄한 백엔드 기술력을 바탕으로, AI 모델을 서비스에 효과적으로 접목하는 “AI 활용 능력을 갖춘 백엔드 개발자”를 목표로 정진하고 있습니다. 배움의 자세로 끊임없이 성장하는 개발자가 되겠습니다.',
@@ -10,8 +11,19 @@ export const experiences = [
     role: '사원 (정규직)',
     company: '애니셀',
     period: '2024.03 ~ 현재',
-    summary:
-      '보안 솔루션 기업에서 게이트웨이부터 관제 대시보드까지 이어지는 4단계 통신 아키텍처를 다루며, 다중 서버 환경에서 프로토콜 정의와 데이터 정합성을 맞추는 백엔드 개발을 전담했습니다. MQTT, WebSocket, RESTful API를 활용한 실시간 데이터 처리와 로그 기반 장애 분석 경험을 바탕으로 안정적인 서비스 운영에 기여하고 있습니다. 특히 UWB 프로젝트에서는 센서 데이터가 불규칙하게 튀는 지터링 문제를 하드웨어 탓으로만 보지 않고, DB 저장 단계에서 필터링 로직을 적용해 데이터 품질을 개선한 경험이 있습니다.',
+    summary: '보안·출입 게이트 IoT 통신 스택을 1인으로 설계·구현했습니다.',
+    items: [
+      {
+        title: 'Gatelink Gateway (Python, asyncio)',
+        description:
+          'Linux SBC에서 MCU UART(keep-alive·EVT)를 파싱해 MQTT·REST로 동일 JSON을 전송하는 비동기 게이트웨이입니다. 환경 변수로 업링크를 전환하고, UART 링크 telemetry와 클라우드 업링크 성공·실패를 MCU에 server-connected/disconnected로 피드백합니다. 전송 장애 시에도 시리얼 수신은 유지하고 outbound 큐(최대 512건)에 이벤트를 적재한 뒤 복구 시 순서대로 drain하는 coordinator로 UART·전송 수명을 분리했습니다. publish 성공과 백엔드 수신을 구분한 관측성 정리, telemetry 스팸 방지 정책, 메시지 스펙 문서화로 현장·백엔드 연동을 맞췄습니다.',
+      },
+      {
+        title: 'BrokerServer (Spring Boot, HiveMQ Embedded)',
+        description:
+          'TCP·WebSocket MQTT 브로커와 REST API를 단일 프로세스로 제공하는 통합 백엔드입니다. MQTT·HTTP 인입을 동일 파이프라인으로 처리해 PostgreSQL에 저장하고, 텔레메트리 기반 last_seen_at·스케줄러 타임아웃으로 장치 연결 상태를 판단합니다. QoS 재전송 대비 (device_code, source_event_code) 유니크와 ON CONFLICT DO NOTHING으로 이벤트 멱등성을 보장하고, UI·임베디드 clientId별 MQTT 인증·구독을 분리했습니다. 이벤트 CSV는 StreamingResponseBody로 스트리밍하며 X-Total-Count로 빈 결과를 구분하고, Flyway·Docker Compose·Jenkins prod 배포까지 담당했습니다.',
+      },
+    ],
   },
 ]
 
@@ -87,6 +99,24 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/Synapse-Commerce',
   },
   {
+    title: 'On-Quest – 게임형 온보딩 플랫폼',
+    description:
+      '신입 사원의 조직 적응을 돕기 위해 퀘스트 형태의 과제를 부여하고, 사수(관리자)가 증빙을 검토하며 n8n을 통해 Slack으로 실시간 알림을 보내는 MVP입니다. companyCode 기반 멀티 테넌트와 admin/employee 역할 분리, 퀘스트 v2 상태 흐름(대기→착수→검토 대기→완료/반려), PostgreSQL bytea 증빙 저장, HMAC 서명 웹훅·JWT refresh·마감 Cron 알림 등 백엔드·자동화·프론트를 Docker Compose로 일괄 구성했습니다.',
+    tech: [
+      'React',
+      'Vite',
+      'TypeScript',
+      'NestJS',
+      'Prisma',
+      'PostgreSQL',
+      'n8n',
+      'Slack API',
+      'Docker',
+      'JWT',
+    ],
+    repo: 'https://github.com/eunkyo3/on-quest',
+  },
+  {
     title: 'MediScan – 시니어 친화형 알약 인식 앱',
     description:
       '60~80대 시니어를 위한 알약 인식 모바일 앱으로, 카메라로 촬영한 알약을 YOLOv8·OCR로 인식해 Spring Boot 서버에서 약 정보(API)를 조회합니다. 큰 글씨, 음성 안내(TTS), 최근 검색 기록, 다중 알약 인식 등 실버 UX에 최적화된 플로우를 설계했습니다.',
@@ -114,7 +144,7 @@ export const skills = {
   frontend: ['React', 'Vue'],
   backend: ['Spring', 'Node.js', 'RESTful API 설계', '시큐어 코딩', 'Gradle', 'Firebase'],
   data: ['MySQL', 'PostgreSQL', 'Oracle'],
-  devops: ['AWS 인프라 구축', 'AWS (ECS, EB)', 'Docker', 'Kubernetes', 'Redis', 'Vercel', 'Linux'],
+  devops: ['AWS (Lightsail, S3, EC2, VPC)', 'Docker', 'Kubernetes', 'Redis', 'Vercel', 'Linux'],
   etc: ['Git', '리버스 엔지니어링 기초', '모의해킹/화이트해킹 실습', '문서화 및 이슈 트래킹'],
 }
 
@@ -151,18 +181,6 @@ export const activities = [
 ]
 
 export const awards = [
-  {
-    title: '2023 지방기능경기대회 클라우드컴퓨팅(AWS)',
-    detail: '2023.04 · 경기도기능경기위원회 · AWS 기반 클라우드 인프라 구축 분야 지방기능경기대회 참가',
-  },
-  {
-    title: '화이트해커 경진대회 – 입상',
-    detail: '2023.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 CTF 문제를 해결하여 입상',
-  },
-  {
-    title: '2024 지방기능경기대회 클라우드컴퓨팅(AWS)',
-    detail: '2024.04 · 경기도기능경기위원회 · AWS 기반 클라우드 인프라 구축 분야 지방기능경기대회 참가',
-  },
   {
     title: '화이트해커 경진대회 – 우수상',
     detail: '2024.11 · 현대오토에버 / 함께일하는재단 · 화이트해커 경진대회에서 CTF 문제를 해결하여 우수상 수상',

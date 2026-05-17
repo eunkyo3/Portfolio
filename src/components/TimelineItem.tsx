@@ -1,11 +1,17 @@
+type ExperienceItem = {
+  title: string
+  description: string
+}
+
 type TimelineItemProps = {
   role: string
   company: string
   period: string
   summary: string
+  items?: ExperienceItem[]
 }
 
-export function TimelineItem({ role, company, period, summary }: TimelineItemProps) {
+export function TimelineItem({ role, company, period, summary, items }: TimelineItemProps) {
   return (
     <div className="relative pl-10 pb-10 border-l border-neutral-200/70 dark:border-neutral-800/70 last:pb-0 group">
       <span className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 dark:from-blue-400 dark:to-sky-300 shadow-md shadow-blue-500/40" />
@@ -19,8 +25,16 @@ export function TimelineItem({ role, company, period, summary }: TimelineItemPro
       <p className="mt-3 text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
         {summary}
       </p>
+      {items && items.length > 0 && (
+        <ul className="mt-4 space-y-4">
+          {items.map((item) => (
+            <li key={item.title} className="text-sm md:text-base text-neutral-700 dark:text-neutral-300">
+              <p className="font-semibold text-neutral-900 dark:text-neutral-100">{item.title}</p>
+              <p className="mt-1 leading-relaxed">{item.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }
-
-

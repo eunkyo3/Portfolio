@@ -70,36 +70,20 @@ export function Home() {
               </p>
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <a
-              href="https://github.com/eunkyo3"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-xl border border-neutral-200/80 bg-neutral-50/80 p-4 sm:p-5 hover:border-blue-500/70 hover:bg-blue-50/60 transition-colors dark:border-neutral-700/80 dark:bg-neutral-900/80 dark:hover:border-blue-400/70 dark:hover:bg-neutral-900"
-            >
-              <p className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">GitHub</p>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
-                소스 코드를 관리하는 저장소입니다.
-              </p>
-              <p className="mt-2 text-xs text-blue-600 dark:text-blue-400 group-hover:underline">
-                깃허브로 이동
-              </p>
-            </a>
-            <a
-              href="https://kyo-0209.notion.site/2caeed92c4108090bccfccd2f56b3c6d"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-xl border border-neutral-200/80 bg-neutral-50/80 p-4 sm:p-5 hover:border-purple-500/70 hover:bg-purple-50/60 transition-colors dark:border-neutral-700/80 dark:bg-neutral-900/80 dark:hover:border-purple-400/70 dark:hover:bg-neutral-900"
-            >
-              <p className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">Notion</p>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
-                학습 내용을 정리하고 공간입니다.
-              </p>
-              <p className="mt-2 text-xs text-purple-600 dark:text-purple-400 group-hover:underline">
-                노션으로 이동
-              </p>
-            </a>
-          </div>
+          <a
+            href="https://github.com/eunkyo3"
+            target="_blank"
+            rel="noreferrer"
+            className="group block rounded-xl border border-neutral-200/80 bg-neutral-50/80 p-4 sm:p-5 hover:border-blue-500/70 hover:bg-blue-50/60 transition-colors dark:border-neutral-700/80 dark:bg-neutral-900/80 dark:hover:border-blue-400/70 dark:hover:bg-neutral-900"
+          >
+            <p className="text-sm font-semibold text-neutral-900 dark:text-white mb-1">GitHub</p>
+            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
+              소스 코드를 관리하는 저장소입니다.
+            </p>
+            <p className="mt-2 text-xs text-blue-600 dark:text-blue-400 group-hover:underline">
+              깃허브로 이동
+            </p>
+          </a>
         </div>
         </Reveal>
       </section>

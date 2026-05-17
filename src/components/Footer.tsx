@@ -12,14 +12,6 @@ export function Footer() {
           >
             GitHub · 소스 코드 저장소
           </a>
-          <a
-            className="hover:text-neutral-900 dark:hover:text-white"
-            href="https://kyo-0209.notion.site/2caeed92c4108090bccfccd2f56b3c6d"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Notion 포트폴리오
-          </a>
         </div>
       </div>
     </footer>
