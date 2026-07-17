@@ -7,11 +7,13 @@ export function Experience() {
   return (
     <section className="space-y-8">
       <div className="space-y-3">
-        <p className="text-xs font-medium tracking-wide text-blue-600 dark:text-blue-400 uppercase">
+        <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400">
+          <span className="font-mono">02</span>
+          <span className="h-px w-8 bg-gradient-to-r from-indigo-500 to-transparent" />
           {t.experience.title}
         </p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">
-          가치 있는 실무 경험
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
+          가치 있는 <span className="text-gradient">실무 경험</span>
         </h2>
       </div>
       <div className="mt-2">
@@ -22,5 +24,3 @@ export function Experience() {
     </section>
   )
 }
-
-

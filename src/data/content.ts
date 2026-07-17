@@ -33,7 +33,7 @@ export const projects = [
     description:
       '청각장애인과 비장애인 간의 실시간 의사소통 격차를 줄이기 위해, 수어 영상 인식 딥러닝과 LLM 기반 자연어 생성·요약을 결합한 양방향 통역 서비스를 지향합니다. 카메라로 입력된 수어를 단어 단위로 인식해 자연스러운 문장·음성으로 변환하고, 반대로 텍스트·음성을 수어 애니메이션으로 출력해 수어만으로도 챗봇과 대화할 수 있는 환경을 제공합니다. 이를 통해 교육·고용·일상에서 청각장애인의 정보 접근성과 소통 기회를 넓히는 것을 목표로 합니다.',
     tech: ['Computer Vision', 'Sign Language Recognition', 'LLM', 'Python', 'AI 서비스 연동'],
-    repo: 'https://www.signgpt.org/',
+    link: 'https://www.signgpt.org/',
   },
   {
     title: 'AI 뉴스 기반 종목 추천 시스템',

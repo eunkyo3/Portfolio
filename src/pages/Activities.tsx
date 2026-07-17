@@ -5,10 +5,14 @@ export function Activities() {
   return (
     <section className="space-y-8">
       <div className="space-y-3">
-        <p className="text-xs font-medium tracking-wide text-blue-600 dark:text-blue-400 uppercase">
+        <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400">
+          <span className="font-mono">06</span>
+          <span className="h-px w-8 bg-gradient-to-r from-indigo-500 to-transparent" />
           Activities
         </p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">대외활동 & 수상</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
+          대외활동 & <span className="text-gradient">수상</span>
+        </h2>
       </div>
       {/* 대외활동 */}
       <section className="space-y-4">
@@ -16,7 +20,7 @@ export function Activities() {
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {activities.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>
-              <div className="h-full rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm hover:-translate-y-1 hover:shadow-xl transition-all hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70 flex flex-col">
+              <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
                 <h4 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">{a.title}</h4>
                 <p className="mt-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">
                   {a.detail}
@@ -32,7 +36,7 @@ export function Activities() {
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {awards.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>
-              <div className="h-full rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm hover:-translate-y-1 hover:shadow-xl transition-all hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70 flex flex-col">
+              <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
                 <h4 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">{a.title}</h4>
                 <p className="mt-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">
                   {a.detail}

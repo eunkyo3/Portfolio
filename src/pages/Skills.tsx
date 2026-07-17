@@ -6,17 +6,22 @@ export function Skills() {
   return (
     <section className="space-y-8">
       <div className="space-y-3">
-        <p className="text-xs font-medium tracking-wide text-blue-600 dark:text-blue-400 uppercase">
+        <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-indigo-600 dark:text-indigo-400">
+          <span className="font-mono">04</span>
+          <span className="h-px w-8 bg-gradient-to-r from-indigo-500 to-transparent" />
           {t.skills.title}
         </p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">
-          안정적인 백엔드와 인프라를 위한 기술 스택
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
+          안정적인 백엔드와 인프라를 위한 <span className="text-gradient">기술 스택</span>
         </h2>
       </div>
       <div className="space-y-6">
         {/* Client Side */}
-        <div className="rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70">
-          <h3 className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white mb-3">Client Side</h3>
+        <div className="card-glass p-5 sm:p-6">
+          <h3 className="mb-3 flex items-center gap-2 text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
+            Client Side
+          </h3>
           <div className="space-y-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-semibold text-neutral-900 dark:text-neutral-100">Web</span>
@@ -32,8 +37,9 @@ export function Skills() {
           </div>
         </div>
         {/* Server Side & Security */}
-        <div className="rounded-2xl border border-blue-500/40 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/80 dark:border-blue-500/50 dark:bg-neutral-900/80">
-          <h3 className="text-sm sm:text-base font-semibold text-blue-700 dark:text-blue-300 mb-3">
+        <div className="card-glass card-glass-hover border-indigo-500/40 dark:border-indigo-400/40 p-5 sm:p-6">
+          <h3 className="mb-3 flex items-center gap-2 text-sm sm:text-base font-semibold text-indigo-700 dark:text-indigo-300">
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
             Server Side
           </h3>
           <div className="space-y-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
@@ -52,8 +58,11 @@ export function Skills() {
           </div>
         </div>
         {/* Data Layer */}
-        <div className="rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70">
-          <h3 className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white mb-3">Data Layer</h3>
+        <div className="card-glass p-5 sm:p-6">
+          <h3 className="mb-3 flex items-center gap-2 text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
+            Data Layer
+          </h3>
           <div className="space-y-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-semibold text-neutral-900 dark:text-neutral-100">Database</span>
@@ -69,8 +78,9 @@ export function Skills() {
           </div>
         </div>
         {/* Infrastructure & DevOps */}
-        <div className="rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70">
-          <h3 className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white mb-3">
+        <div className="card-glass p-5 sm:p-6">
+          <h3 className="mb-3 flex items-center gap-2 text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
             Infrastructure &amp; DevOps
           </h3>
           <div className="space-y-3 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
@@ -88,8 +98,11 @@ export function Skills() {
           </div>
         </div>
         {/* Etc */}
-        <div className="rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/70">
-          <h3 className="text-sm sm:text-base font-semibold text-neutral-900 dark:text-white mb-3">Etc</h3>
+        <div className="card-glass p-5 sm:p-6">
+          <h3 className="mb-3 flex items-center gap-2 text-sm sm:text-base font-semibold text-neutral-900 dark:text-white">
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400" />
+            Etc
+          </h3>
           <div className="flex flex-wrap gap-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
             <SkillBadge label="Git" />
             <SkillBadge label="Gradle" />
@@ -101,5 +114,3 @@ export function Skills() {
     </section>
   )
 }
-
-

@@ -8,30 +8,36 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, description, tech, link, repo }: ProjectCardProps) {
   return (
-    <div className="h-full rounded-2xl border border-neutral-200/80 bg-white/80 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:border-blue-500/60 dark:border-neutral-800/80 dark:bg-neutral-900/60 flex flex-col">
+    <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white leading-snug">
           {title}
         </h3>
         <div className="flex gap-3 text-sm">
-          {link && (
-            <a
-              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap"
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              바로가기
-            </a>
-          )}
           {repo && (
             <a
-              className="text-blue-700 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap"
+              className="inline-flex items-center gap-1 text-neutral-600 hover:text-indigo-600 dark:text-neutral-300 dark:hover:text-indigo-400 whitespace-nowrap transition-colors"
               href={repo}
               target="_blank"
               rel="noreferrer"
             >
-              바로가기
+              GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+          )}
+          {link && (
+            <a
+              className="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 whitespace-nowrap transition-colors"
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
             </a>
           )}
         </div>
@@ -43,7 +49,7 @@ export function ProjectCard({ title, description, tech, link, repo }: ProjectCar
         {tech.map((t) => (
           <span
             key={t}
-            className="text-[11px] sm:text-xs bg-neutral-100/80 text-neutral-800 px-2.5 py-1 rounded-full border border-neutral-200/70 dark:bg-neutral-800/80 dark:text-neutral-200 dark:border-neutral-700/80"
+            className="rounded-full border border-indigo-500/20 bg-indigo-500/5 px-2.5 py-1 text-[11px] sm:text-xs font-medium text-indigo-700 dark:border-indigo-400/20 dark:bg-indigo-400/10 dark:text-indigo-300"
           >
             {t}
           </span>
@@ -52,5 +58,3 @@ export function ProjectCard({ title, description, tech, link, repo }: ProjectCar
     </div>
   )
 }
-
-

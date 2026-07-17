@@ -1,13 +1,92 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Malgun Gothic", sans-serif;
+}
+
 html, body, #root {
   height: 100%;
 }
 
 body {
-  @apply bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100;
+  @apply bg-[#fafafa] text-neutral-900 antialiased dark:bg-[#060913] dark:text-neutral-100;
+  font-family: var(--font-sans);
 }
 
-.container-responsive {
-  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+/* Shared recipes live in the components layer so plain utilities can override them
+   (unlayered rules would beat Tailwind's layered utilities regardless of order). */
+@layer components {
+  .container-responsive {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-400 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-cyan-300;
+  }
+
+  .card-glass {
+    @apply rounded-2xl border border-neutral-200/70 bg-white/70 shadow-sm backdrop-blur-xl transition-all duration-300 dark:border-white/10 dark:bg-white/[0.04];
+  }
+
+  .card-glass-hover {
+    @apply hover:-translate-y-1 hover:border-indigo-400/50 hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:border-indigo-400/40 dark:hover:shadow-indigo-500/20;
+  }
+}
+
+/* global animated background */
+@keyframes bg-move {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-40px, 20px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes float-slow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -30px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-300/70 dark:bg-white/10;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-400/60 dark:bg-indigo-400/30;
+}
+
+html {
+  scrollbar-color: rgb(212 212 212 / 0.7) transparent;
+}
+
+html.dark {
+  scrollbar-color: rgb(255 255 255 / 0.1) transparent;
+}
+
+::selection {
+  @apply bg-indigo-500/30 text-indigo-950 dark:bg-indigo-400/30 dark:text-white;
 }
