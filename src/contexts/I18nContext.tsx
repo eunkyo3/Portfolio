@@ -20,8 +20,8 @@ const translations = {
       viewProjects: '프로젝트 보기',
       github: 'GitHub',
       cardTitle: 'Backend · Data · AI',
-      cardLine1: 'API와 데이터 흐름을 설계하고,',
-      cardLine2: 'AI 모델을 서비스에 녹여내는 일을 좋아합니다.',
+      cardLine1: 'API와 데이터 흐름을 안정적으로 설계하고,',
+      cardLine2: '개발 곳곳에 AI를 잘 활용해 더 효율적으로 일합니다.',
       archiving: {
         label: 'Archiving',
         title: '공부와 프로젝트를 기록하는 공간',
@@ -110,8 +110,8 @@ const translations = {
       viewProjects: 'View Projects',
       github: 'GitHub',
       cardTitle: 'Backend · Data · AI',
-      cardLine1: 'I love designing APIs and data flows',
-      cardLine2: 'and weaving AI models into real services.',
+      cardLine1: 'I design stable APIs and data flows,',
+      cardLine2: 'and leverage AI well across development to work more efficiently.',
       archiving: {
         label: 'Archiving',
         title: 'A space to record my studies and projects',

@@ -64,10 +64,10 @@ export function Home() {
                   <p>{t.home.cardLine2}</p>
                   <div className="mt-3 flex flex-wrap justify-center gap-2 text-[11px] sm:text-xs">
                     <span className="rounded-full border border-indigo-400/60 px-2 py-1">Java</span>
-                    <span className="rounded-full border border-violet-400/60 px-2 py-1">Python</span>
-                    <span className="rounded-full border border-cyan-400/60 px-2 py-1">Node.js</span>
-                    <span className="rounded-full border border-emerald-400/60 px-2 py-1">SQL</span>
-                    <span className="rounded-full border border-pink-400/60 px-2 py-1">AI Projects</span>
+                    <span className="rounded-full border border-violet-400/60 px-2 py-1">Spring</span>
+                    <span className="rounded-full border border-cyan-400/60 px-2 py-1">Python</span>
+                    <span className="rounded-full border border-emerald-400/60 px-2 py-1">PostgreSQL</span>
+                    <span className="rounded-full border border-pink-400/60 px-2 py-1">Docker</span>
                   </div>
                 </div>
               </div>
