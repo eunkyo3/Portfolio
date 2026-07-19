@@ -32,6 +32,7 @@ export function Navbar() {
     ['skills', t.nav.skills],
     ['certificates', t.nav.certificates],
     ['activities', t.nav.activities],
+    ['contact', t.nav.contact],
   ]
 
   return (

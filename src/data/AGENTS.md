@@ -22,13 +22,13 @@ Types are inferred, not declared. There are no interfaces here; each consumer de
 | `certificates` | `[{ title, issuer, date }]` | `pages/Certificates.tsx` |
 | `activities` | `[{ title, detail }]` | `pages/Activities.tsx` |
 | `awards` | `[{ title, detail }]` | `pages/Activities.tsx` |
-| `skills` | `{ languages, frontend, backend, data, devops, etc }` | **Nobody — this export is dead.** See below. |
+| `skillGroups` | `[{ title, highlight, rows: [{ label, items: string[] }] }]` | `pages/Skills.tsx` |
 
 ## For AI Agents
 
 ### Working In This Directory
 
-**`skills` is not rendered.** `pages/Skills.tsx` does not import it; that page hardcodes its own `<SkillBadge label="..." />` list. The two have already drifted — `content.ts` lists AWS as `Lightsail, S3, EC2, VPC` while the page renders the same group and the README describes it as `ECS, EB`. Editing `skills` here changes nothing on the site. If asked to update skills, edit `pages/Skills.tsx`, and consider raising the duplication rather than silently updating one of the two.
+**`skillGroups` is the single source for the Skills section.** `pages/Skills.tsx` maps over it (group `title`/`highlight` + `rows` of `label` + `items`). Edit skills here; the page needs no change. (The old dead `skills` object was removed.)
 
 **`repo` vs `link` render differently — the data must obey the field intent.** `ProjectCard` labels `repo` as "GitHub" and `link` as "Live", so a misfiled URL is user-visible. Use `repo` for source code, `link` for a live site. (SignGPT's product-site URL was moved from `repo` to `link` in 2026-07 for exactly this reason.)
 

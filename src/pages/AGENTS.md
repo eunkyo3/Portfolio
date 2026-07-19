@@ -15,24 +15,24 @@ Each section owns one concern: pull its slice from `data/content.ts`, render a h
 | `About.tsx` | Two-column profile: an `ABOUT ME` definition list (name, birth date, position, education, interests, phone, email) beside the `profile.summary` prose. Several fields are hardcoded here rather than read from `profile`. |
 | `Experience.tsx` | Maps `experiences` → `TimelineItem`. |
 | `Projects.tsx` | Maps `projects` → `ProjectCard` in a 2-column grid, staggered via `Reveal delay={idx * 0.08}`. |
-| `Skills.tsx` | Five hardcoded skill-group cards (Client Side, Server Side, Data Layer, Infrastructure & DevOps, Etc) built from `SkillBadge`. **Does not read `skills` from `content.ts`.** |
+| `Skills.tsx` | Renders five skill-group cards from the `skillGroups` export in `content.ts` via `SkillBadge`. |
 | `Certificates.tsx` | Maps `certificates` → cards with a gradient top rule. |
 | `Activities.tsx` | Two subsections in one component: `activities` (대외활동) and `awards` (수상경력). |
-| `Contact.tsx` | **Orphaned — nothing imports it.** A local email/message form. See below. |
+| `Contact.tsx` | Link-based contact section (email `mailto:`, GitHub). Rendered by `Home` under `<section id="contact">`. |
 
 ## For AI Agents
 
 ### Working In This Directory
 
-**`Contact.tsx` is dead code, and it is also non-functional.** Neither `Home` nor `App` imports it, so it never renders. Its `onSubmit` only calls `preventDefault()` and flips local state to `'sent'` — it does not send anything anywhere, and the inputs are uncontrolled with no `name` attributes, so the typed values are discarded. Wiring it into `Home` would show visitors a form that silently drops their message. If the user wants a contact section, that needs a real destination (a form service, `mailto:`, an API) — treat it as unbuilt, not as an existing feature to re-enable. Its strings are already in `translations` (`t.contact.*`).
+**`Contact.tsx` is a real, wired contact section.** `Home` renders it under `<section id="contact">` and `Navbar` scrolls to it. It shows link cards — email (`mailto:`) and GitHub, both from `profile` — with no form and no fake submit (the old non-functional form was removed). Add channels by editing the `channels` array.
 
-**`Skills.tsx` duplicates `data/content.ts`.** The badges are hardcoded JSX; the `skills` export is unused and the two have drifted. Skill edits go in this file. Flag the duplication rather than quietly updating one side.
+**`Skills.tsx` is data-driven.** It renders from the `skillGroups` export in `data/content.ts`. Edit skills there, not in JSX.
 
 **Section `id`s are an untyped contract with `Navbar`.** `Home.tsx`'s `<section id="about">` and `Navbar.tsx`'s `scrollTo('about')` are matched only by string equality. Rename in both, or the nav button silently no-ops.
 
 **Sections are double-wrapped in `Reveal`.** `Home` wraps each section in `<Reveal>`, and `Projects`/`Certificates`/`Activities` wrap each *card* in `Reveal` again for stagger. That is intentional. Adding a third layer means an inner element may reveal before its container is visible.
 
-**`About.tsx` hardcodes what `profile` could supply.** Education, interests, position, phone, and email are literals in the JSX; only `name`, `birthDate`, `role`, and `summary` come from `profile`. Update the JSX for those fields — editing `content.ts` alone will not move them. (Consolidating them into `profile` is a reasonable improvement to offer.)
+**`About.tsx` mixes `profile` fields and literals.** `name`, `birthDate`, `role`, `summary`, and `email` come from `profile`; education, interests, and position are still literals in the JSX. The phone number was removed for privacy. Update the JSX for the literal fields.
 
 **Section headings are hardcoded Korean.** Only the small uppercase eyebrow labels use `t.*`. See `../contexts/AGENTS.md` for why this makes the `en` translation mostly cosmetic.
 

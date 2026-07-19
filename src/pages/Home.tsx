@@ -5,6 +5,7 @@ import { Projects } from './Projects'
 import { Skills } from './Skills'
 import { Certificates } from './Certificates'
 import { Activities } from './Activities'
+import { Contact } from './Contact'
 import { Reveal } from '../components/Reveal'
 
 export function Home() {
@@ -147,6 +148,11 @@ export function Home() {
         <section id="activities">
           <Reveal>
             <Activities />
+          </Reveal>
+        </section>
+        <section id="contact">
+          <Reveal>
+            <Contact />
           </Reveal>
         </section>
       </div>

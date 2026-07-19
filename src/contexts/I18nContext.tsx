@@ -13,8 +13,7 @@ const translations = {
     skills: { title: '기술 스택' },
     certificates: { title: '자격증' },
     activities: { title: '외부 활동' },
-    contact: { title: '연락하기', email: '이메일', message: '메세지', send: '보내기', sent: '메세지가 전송되었습니다. 빠르게 답변드릴게요!' },
-    toggles: { theme: '테마', lang: '언어' },
+    contact: { title: '연락하기', email: '이메일' },
   },
   en: {
     siteTitle: 'Backend Portfolio',
@@ -26,8 +25,7 @@ const translations = {
     skills: { title: 'Skills' },
     certificates: { title: 'Certificates' },
     activities: { title: 'Activities' },
-    contact: { title: 'Contact', email: 'Email', message: 'Message', send: 'Send', sent: 'Your message has been sent. I will reply soon!' },
-    toggles: { theme: 'Theme', lang: 'Lang' },
+    contact: { title: 'Contact', email: 'Email' },
   },
 }
 

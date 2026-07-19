@@ -45,13 +45,13 @@ export function About() {
                 백엔드, 보안, 클라우드 인프라, AI 기반 서비스
               </dd>
             </div>
-            <div className="flex justify-between gap-3 py-2.5">
-              <dt className="font-semibold uppercase tracking-wider text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400">연락처</dt>
-              <dd className="text-right text-neutral-900 dark:text-neutral-50">010-4242-8049</dd>
-            </div>
             <div className="flex justify-between gap-3 py-2.5 last:pb-0">
               <dt className="font-semibold uppercase tracking-wider text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400">이메일</dt>
-              <dd className="text-right text-neutral-900 dark:text-neutral-50">dmsry060209@gmail.com</dd>
+              <dd className="text-right text-neutral-900 dark:text-neutral-50">
+                <a href={`mailto:${profile.email}`} className="hover:text-indigo-600 dark:hover:text-indigo-400">
+                  {profile.email}
+                </a>
+              </dd>
             </div>
           </dl>
         </div>

@@ -2,6 +2,8 @@ export const profile = {
   name: '정은교',
   birthDate: '2006.02.09',
   role: 'AI와 데이터를 연결하는 백엔드 개발자',
+  email: 'dmsry060209@gmail.com',
+  github: 'https://github.com/eunkyo3',
   summary:
     '어린 시절 접한 컴퓨터 게임을 통해 소프트웨어의 세계에 눈을 떴고, 자연스럽게 개발자라는 꿈을 키우게 되었습니다. 특성화 고등학교 진학 후 마주한 개발의 세계는 낯설고 어려웠지만, 하나하나 문제를 해결해 나가는 과정에서 깊은 성취감과 재미를 느꼈습니다. 특히 보이지 않는 곳에서 데이터를 제어하여 사용자에게 편의를 제공하는 백엔드 분야에 매력을 느꼈습니다. 현재는 탄탄한 백엔드 기술력을 바탕으로, AI 모델을 서비스에 효과적으로 접목하는 “AI 활용 능력을 갖춘 백엔드 개발자”를 목표로 정진하고 있습니다. 배움의 자세로 끊임없이 성장하는 개발자가 되겠습니다.',
 }
@@ -226,14 +228,45 @@ export const projects = [
   },
 ]
 
-export const skills = {
-  languages: ['Python', 'Java', 'JavaScript', 'SQL', 'Dart & Flutter'],
-  frontend: ['React', 'Vue'],
-  backend: ['Spring', 'Node.js', 'RESTful API 설계', '시큐어 코딩', 'Gradle', 'Firebase'],
-  data: ['MySQL', 'PostgreSQL', 'Oracle'],
-  devops: ['AWS (Lightsail, S3, EC2, VPC)', 'Docker', 'Kubernetes', 'Redis', 'Vercel', 'Linux'],
-  etc: ['Git', '리버스 엔지니어링 기초', '모의해킹/화이트해킹 실습', '문서화 및 이슈 트래킹'],
-}
+export const skillGroups = [
+  {
+    title: 'Client Side',
+    highlight: false,
+    rows: [
+      { label: 'Web', items: ['React', 'Vue', 'JavaScript'] },
+      { label: 'Mobile', items: ['Flutter', 'Dart'] },
+    ],
+  },
+  {
+    title: 'Server Side',
+    highlight: true,
+    rows: [
+      { label: 'Core', items: ['Java', 'Python', 'Spring(Boot)', 'Node.js'] },
+      { label: 'Key Competency', items: ['RESTful API 설계', '시큐어 코딩'] },
+    ],
+  },
+  {
+    title: 'Data Layer',
+    highlight: false,
+    rows: [
+      { label: 'Database', items: ['MySQL', 'PostgreSQL', 'Oracle'] },
+      { label: 'Cache & BaaS', items: ['Redis', 'Firebase'] },
+    ],
+  },
+  {
+    title: 'Infrastructure & DevOps',
+    highlight: false,
+    rows: [
+      { label: 'Deployment', items: ['AWS (Lightsail, S3, EC2, VPC)', 'Vercel'] },
+      { label: 'Operations', items: ['Docker', 'Kubernetes', 'Linux'] },
+    ],
+  },
+  {
+    title: 'Etc',
+    highlight: false,
+    rows: [{ label: '', items: ['Git', 'Gradle', '이슈 트래킹', '리버스 엔지니어링'] }],
+  },
+]
 
 
 export const certificates = [
