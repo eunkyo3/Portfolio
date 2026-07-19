@@ -69,7 +69,7 @@ const profileKo: Profile = {
   email: 'dmsry060209@gmail.com',
   github: 'https://github.com/eunkyo3',
   summary:
-    '어린 시절 접한 컴퓨터 게임을 통해 소프트웨어의 세계에 눈을 떴고, 자연스럽게 개발자라는 꿈을 키우게 되었습니다. 특성화 고등학교 진학 후 마주한 개발의 세계는 낯설고 어려웠지만, 하나하나 문제를 해결해 나가는 과정에서 깊은 성취감과 재미를 느꼈습니다. 특히 보이지 않는 곳에서 데이터를 제어하여 사용자에게 편의를 제공하는 백엔드 분야에 매력을 느꼈습니다. 현재는 탄탄한 백엔드 기술력을 바탕으로, AI 모델을 서비스에 효과적으로 접목하는 “AI 활용 능력을 갖춘 백엔드 개발자”를 목표로 정진하고 있습니다. 배움의 자세로 끊임없이 성장하는 개발자가 되겠습니다.',
+    '어린 시절 접한 컴퓨터 게임을 통해 소프트웨어의 세계에 눈을 떴고, 자연스럽게 개발자라는 꿈을 키웠습니다. 특성화 고등학교에서 마주한 개발은 낯설고 어려웠지만, 문제를 하나하나 해결해 나가며 깊은 성취감과 재미를 느꼈습니다. 특히 보이지 않는 곳에서 데이터를 제어해 사용자에게 편의를 제공하는 백엔드 분야에 매력을 느꼈습니다. 현재는 P-TECH 과정을 밟으며 평일에는 백엔드 개발자로 풀타임 근무해 실무를 쌓고, 토요일에는 배화여자대학교에서 학업을 이어가며 현장 경험과 이론을 함께 다지고 있습니다. 탄탄한 백엔드 역량을 바탕으로, 개발 업무 곳곳에 AI를 잘 활용해 더 효율적으로 일하는 백엔드 개발자를 목표로 정진하고 있습니다. 배움의 자세로 끊임없이 성장하는 개발자가 되겠습니다.',
 }
 
 const experiencesKo: ExperienceData[] = [
@@ -394,7 +394,7 @@ const profileEn: Profile = {
   email: 'dmsry060209@gmail.com',
   github: 'https://github.com/eunkyo3',
   summary:
-    'The computer games I encountered as a child opened my eyes to the world of software, and I naturally grew a dream of becoming a developer. The world of development I met after entering a vocational high school was unfamiliar and difficult, but I found deep fulfillment and joy in solving problems one by one. I was especially drawn to the backend field, where data is controlled behind the scenes to bring convenience to users. Today, building on solid backend fundamentals, I am working toward becoming a "backend developer skilled at leveraging AI" who effectively integrates AI models into real services. I will keep growing as a developer who always stays willing to learn.',
+    'The computer games I encountered as a child opened my eyes to the world of software, and I naturally grew a dream of becoming a developer. The world of development I met after entering a vocational high school was unfamiliar and difficult, but I found deep fulfillment and joy in solving problems one by one. I was especially drawn to the backend field, where data is controlled behind the scenes to bring convenience to users. Through the P-TECH program, I currently work full-time as a backend developer on weekdays to build hands-on experience, while continuing my studies at Baewha Women\'s University on Saturdays—strengthening practical experience and theory together. Building on solid backend fundamentals, I am working toward becoming a backend developer who leverages AI well throughout day-to-day development to work more efficiently. I will keep growing as a developer who always stays willing to learn.',
 }
 
 const experiencesEn: ExperienceData[] = [

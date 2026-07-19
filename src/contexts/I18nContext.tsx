@@ -45,7 +45,7 @@ const translations = {
       },
       positionValue: '백엔드 개발자',
       educationLine1: '성일정보고등학교 졸업',
-      educationLine2: '배화여자대학교 재학 중',
+      educationLine2: '배화여자대학교(P-TECH) 재학 중',
       interestsValue: '백엔드, 보안, 클라우드 인프라, AI 기반 서비스',
     },
     experience: {
@@ -135,7 +135,7 @@ const translations = {
       },
       positionValue: 'Backend Developer',
       educationLine1: 'Graduated from Sungil Information High School',
-      educationLine2: 'Enrolled at Baewha Women\'s University',
+      educationLine2: 'Enrolled at Baewha Women\'s University (P-TECH)',
       interestsValue: 'Backend, security, cloud infrastructure, AI-powered services',
     },
     experience: {
