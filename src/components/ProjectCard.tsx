@@ -4,9 +4,10 @@ type ProjectCardProps = {
   tech: string[]
   link?: string
   repo?: string
+  problemSolving?: string[]
 }
 
-export function ProjectCard({ title, description, tech, link, repo }: ProjectCardProps) {
+export function ProjectCard({ title, description, tech, link, repo, problemSolving }: ProjectCardProps) {
   return (
     <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
       <div className="flex items-start justify-between gap-3">
@@ -55,6 +56,23 @@ export function ProjectCard({ title, description, tech, link, repo }: ProjectCar
           </span>
         ))}
       </div>
+      {problemSolving && problemSolving.length > 0 && (
+        <details className="group/ps mt-4">
+          <summary className="flex cursor-pointer select-none list-none items-center gap-1.5 text-xs font-semibold text-indigo-700 dark:text-indigo-300">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 transition-transform duration-200 group-open/ps:rotate-90">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+            문제 해결 · {problemSolving.length}
+          </summary>
+          <ul className="mt-3 space-y-2 border-l-2 border-indigo-500/20 pl-3">
+            {problemSolving.map((item, i) => (
+              <li key={i} className="text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
     </div>
   )
 }
