@@ -7,7 +7,7 @@ import { ScrollProgress } from './components/ScrollProgress'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-full flex flex-col relative overflow-hidden">
+      <div className="min-h-full flex flex-col relative">
         <ScrollProgress />
         {/* aurora background layer for all pages */}
         <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">

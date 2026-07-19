@@ -29,6 +29,20 @@ export const experiences = [
 
 export const projects = [
   {
+    title: 'Playlist Insight – 유튜브 플레이리스트 3D 인사이트',
+    description:
+      '공개된 유튜브·유튜브 뮤직 플레이리스트 링크를 붙여넣으면 반복 등장하는 채널과 추론된 음악 씬(장르), 플레이리스트 규모를 3D 우주 지도처럼 인터랙티브하게 시각화하는 서비스입니다. 두 URL 형식을 재생목록 list ID 기준으로 정규화하고 공식 YouTube Data API로 공개 데이터를 수집한 뒤, 반복 채널을 3D 허브로 배치하고 각 채널의 트랙을 주변 궤도로 표현합니다. 장르·씬 요약, 관측 명확도, 플레이리스트 등급, 채널 탐색기를 제공하며, 원본 재생목록이 바뀌어도 결과가 유지되는 안정적 스냅샷 공유 URL을 지원합니다. (Gemini 요약은 선택 기능)',
+    tech: ['Next.js', 'TypeScript', 'Three.js', 'PostgreSQL', 'YouTube Data API', 'Gemini', 'Docker', 'Vitest'],
+    repo: 'https://github.com/eunkyo3/playlist-insight',
+  },
+  {
+    title: 'NutriRank – 가공식품 건강 등급·순위 서비스',
+    description:
+      '영양성분표를 직접 해석하지 않고도 음료·과자의 건강성을 건강 등급(A~E)과 카테고리 순위로 한눈에 확인하게 해 주는 서비스입니다. 식약처 「전국통합식품영양성분정보」 공개 데이터를 적재·정규화하고, 2023 Nutri-Score 알고리즘으로 건강 점수·등급·카테고리 순위를 사전 계산해 조회 시 실시간 연산 없이 즉시 응답합니다. 제품명 검색·필터, 등급 근거(기여 영양소)까지 보여주는 제품 상세, 카테고리별 순위, 분포·평균·상관·추세를 보는 집계 분석 대시보드를 제공합니다.',
+    tech: ['Next.js 15', 'TypeScript', 'SQLite', 'Drizzle ORM', 'Tailwind CSS', 'Vitest', 'Playwright', 'Docker'],
+    repo: 'https://github.com/eunkyo3/NutriRank',
+  },
+  {
     title: 'SignGPT – 실시간 수어 통역 AI 서비스',
     description:
       '청각장애인과 비장애인 간의 실시간 의사소통 격차를 줄이기 위해, 수어 영상 인식 딥러닝과 LLM 기반 자연어 생성·요약을 결합한 양방향 통역 서비스를 지향합니다. 카메라로 입력된 수어를 단어 단위로 인식해 자연스러운 문장·음성으로 변환하고, 반대로 텍스트·음성을 수어 애니메이션으로 출력해 수어만으로도 챗봇과 대화할 수 있는 환경을 제공합니다. 이를 통해 교육·고용·일상에서 청각장애인의 정보 접근성과 소통 기회를 넓히는 것을 목표로 합니다.',

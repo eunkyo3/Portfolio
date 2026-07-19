@@ -12,7 +12,7 @@ html, body, #root {
 }
 
 body {
-  @apply bg-[#fafafa] text-neutral-900 antialiased dark:bg-[#060913] dark:text-neutral-100;
+  @apply bg-[#fafafa] text-neutral-900 antialiased overflow-x-hidden dark:bg-[#060913] dark:text-neutral-100;
   font-family: var(--font-sans);
 }
 
@@ -81,6 +81,8 @@ body {
 
 html {
   scrollbar-color: rgb(212 212 212 / 0.7) transparent;
+  /* offset anchor jumps so section headings clear the sticky header */
+  scroll-padding-top: 5rem;
 }
 
 html.dark {
