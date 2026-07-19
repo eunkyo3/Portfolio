@@ -1,3 +1,5 @@
+import { useI18n } from '../contexts/I18nContext'
+
 type ProjectLink = { label: string; href: string }
 
 type ProjectCardProps = {
@@ -19,6 +21,7 @@ const ExternalIcon = () => (
 )
 
 export function ProjectCard({ title, description, tech, link, repo, links, problemSolving, category, compact }: ProjectCardProps) {
+  const { t } = useI18n()
   return (
     <div className={`card-glass card-glass-hover h-full flex flex-col ${compact ? 'p-4' : 'p-5 sm:p-6'}`}>
       <div className="flex items-start justify-between gap-3">
@@ -98,7 +101,7 @@ export function ProjectCard({ title, description, tech, link, repo, links, probl
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 transition-transform duration-200 group-open/ps:rotate-90">
               <path d="m9 18 6-6-6-6" />
             </svg>
-            문제 해결 · {problemSolving.length}
+            {t.projects.problemSolving} · {problemSolving.length}
           </summary>
           <ul className="mt-3 space-y-2 border-l-2 border-indigo-500/20 pl-3">
             {problemSolving.map((item, i) => (

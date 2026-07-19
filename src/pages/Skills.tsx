@@ -1,8 +1,9 @@
 import { useI18n } from '../contexts/I18nContext'
 import { SkillBadge } from '../components/SkillBadge'
-import { skillGroups } from '../data/content'
+import { useContent } from '../data/useContent'
 
 export function Skills() {
+  const { skillGroups } = useContent()
   const { t } = useI18n()
   return (
     <section className="space-y-8">
@@ -13,7 +14,7 @@ export function Skills() {
           {t.skills.title}
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-          안정적인 백엔드와 인프라를 위한 <span className="text-gradient">기술 스택</span>
+          {t.skills.headingPre}<span className="text-gradient">{t.skills.headingHighlight}</span>
         </h2>
       </div>
       <div className="space-y-6">

@@ -1,8 +1,9 @@
-import { experiences } from '../data/content'
+import { useContent } from '../data/useContent'
 import { TimelineItem } from '../components/TimelineItem'
 import { useI18n } from '../contexts/I18nContext'
 
 export function Experience() {
+  const { experiences } = useContent()
   const { t } = useI18n()
   return (
     <section className="space-y-8">
@@ -13,7 +14,7 @@ export function Experience() {
           {t.experience.title}
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-          가치 있는 <span className="text-gradient">실무 경험</span>
+          {t.experience.headingPre}<span className="text-gradient">{t.experience.headingHighlight}</span>
         </h2>
       </div>
       <div className="mt-2">

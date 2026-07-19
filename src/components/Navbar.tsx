@@ -9,7 +9,7 @@ const mobileNavLinkClass =
   'w-full text-left px-3 py-2.5 rounded-md text-sm font-medium transition-colors text-neutral-600 hover:text-neutral-900 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-white/10'
 
 export function Navbar() {
-  const { t } = useI18n()
+  const { t, lang, setLang } = useI18n()
   const { theme, toggleTheme } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -55,8 +55,16 @@ export function Navbar() {
           </nav>
           <button
             type="button"
+            onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')}
+            aria-label={lang === 'ko' ? t.aria.toEnglish : t.aria.toKorean}
+            className="inline-flex h-9 min-w-9 items-center justify-center rounded-full px-2.5 text-xs font-semibold text-neutral-600 hover:text-neutral-900 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-white/10 transition-colors"
+          >
+            {t.langToggleLabel}
+          </button>
+          <button
+            type="button"
             onClick={toggleTheme}
-            aria-label={theme === 'dark' ? '라이트 모드로 전환' : '다크 모드로 전환'}
+            aria-label={theme === 'dark' ? t.aria.toLight : t.aria.toDark}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-white/10 transition-colors"
           >
             {theme === 'dark' ? (
@@ -73,7 +81,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? '메뉴 닫기' : '메뉴 열기'}
+            aria-label={menuOpen ? t.aria.closeMenu : t.aria.openMenu}
             aria-expanded={menuOpen}
             className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-neutral-900/5 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-white/10 transition-colors"
           >

@@ -1,4 +1,7 @@
+import { useI18n } from '../contexts/I18nContext'
+
 export function Footer() {
+  const { t } = useI18n()
   return (
     <footer className="relative border-t border-neutral-200/70 dark:border-white/10">
       <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-400" />
@@ -11,7 +14,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub · 소스 코드 저장소
+            {t.footer.github}
           </a>
         </div>
       </div>

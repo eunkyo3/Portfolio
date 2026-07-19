@@ -1,7 +1,10 @@
-import { activities, awards } from '../data/content'
+import { useContent } from '../data/useContent'
+import { useI18n } from '../contexts/I18nContext'
 import { Reveal } from '../components/Reveal'
 
 export function Activities() {
+  const { activities, awards } = useContent()
+  const { t } = useI18n()
   return (
     <section className="space-y-8">
       <div className="space-y-3">
@@ -11,12 +14,12 @@ export function Activities() {
           Activities
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-          대외활동 & <span className="text-gradient">수상</span>
+          {t.activities.headingPre}<span className="text-gradient">{t.activities.headingHighlight}</span>
         </h2>
       </div>
-      {/* 대외활동 */}
+      {/* Activities */}
       <section className="space-y-4">
-        <h3 className="text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white">대외활동</h3>
+        <h3 className="text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white">{t.activities.activitiesLabel}</h3>
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {activities.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>
@@ -30,9 +33,9 @@ export function Activities() {
           ))}
         </div>
       </section>
-      {/* 수상경력 */}
+      {/* Awards */}
       <section className="space-y-4">
-        <h3 className="text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white">수상경력</h3>
+        <h3 className="text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white">{t.activities.awardsLabel}</h3>
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {awards.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>

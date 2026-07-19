@@ -1,9 +1,10 @@
-import { projects } from '../data/content'
+import { useContent } from '../data/useContent'
 import { ProjectCard } from '../components/ProjectCard'
 import { useI18n } from '../contexts/I18nContext'
 import { Reveal } from '../components/Reveal'
 
 export function Projects() {
+  const { projects } = useContent()
   const { t } = useI18n()
   const featured = projects.filter((p) => p.tier === 'featured')
   const practice = projects.filter((p) => p.tier !== 'featured')
@@ -17,14 +18,14 @@ export function Projects() {
           {t.projects.title}
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-          백엔드 · 데이터 · 앱 전반을 아우르는 <span className="text-gradient">프로젝트</span>
+          {t.projects.headingPre}<span className="text-gradient">{t.projects.headingHighlight}</span>
         </h2>
       </div>
 
-      {/* 주요 프로젝트 */}
+      {/* Featured projects */}
       <div className="space-y-5">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-neutral-900 dark:text-white">
-          주요 프로젝트
+          {t.projects.featured}
           <span className="rounded-full bg-indigo-500/10 px-2 py-0.5 text-[11px] font-medium text-indigo-600 dark:text-indigo-300">
             {featured.length}
           </span>
@@ -38,10 +39,10 @@ export function Projects() {
         </div>
       </div>
 
-      {/* 학습 · 실습 */}
+      {/* Learning / practice */}
       <div className="space-y-5">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-neutral-500 dark:text-neutral-400">
-          학습 · 실습
+          {t.projects.practice}
           <span className="rounded-full bg-neutral-500/10 px-2 py-0.5 text-[11px] font-medium text-neutral-500 dark:text-neutral-400">
             {practice.length}
           </span>

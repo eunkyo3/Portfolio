@@ -1,7 +1,8 @@
-import { profile } from '../data/content'
+import { useContent } from '../data/useContent'
 import { useI18n } from '../contexts/I18nContext'
 
 export function Contact() {
+  const { profile } = useContent()
   const { t } = useI18n()
 
   const channels = [
@@ -39,10 +40,10 @@ export function Contact() {
           {t.nav.contact}
         </p>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-          함께 성장할 <span className="text-gradient">기회</span>를 기다립니다
+          {t.contact.headingPre}<span className="text-gradient">{t.contact.headingHighlight}</span>{t.contact.headingPost}
         </h2>
         <p className="max-w-2xl text-sm sm:text-base text-neutral-600 dark:text-neutral-300">
-          제안·협업·채용 등 어떤 이야기든 편하게 연락 주세요. 빠르게 답변드리겠습니다.
+          {t.contact.subtitle}
         </p>
       </div>
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2 lg:gap-6">
