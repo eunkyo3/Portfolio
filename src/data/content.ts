@@ -29,6 +29,8 @@ export const experiences = [
 
 export const projects = [
   {
+    category: '풀스택 서비스',
+    tier: 'featured',
     title: 'Playlist Insight – 유튜브 플레이리스트 3D 인사이트',
     description:
       '공개된 유튜브·유튜브 뮤직 플레이리스트 링크를 붙여넣으면 반복 등장하는 채널과 추론된 음악 씬(장르), 플레이리스트 규모를 3D 우주 지도처럼 인터랙티브하게 시각화하는 서비스입니다. 두 URL 형식을 재생목록 list ID 기준으로 정규화하고 공식 YouTube Data API로 공개 데이터를 수집한 뒤, 반복 채널을 3D 허브로 배치하고 각 채널의 트랙을 주변 궤도로 표현합니다. 장르·씬 요약, 관측 명확도, 플레이리스트 등급, 채널 탐색기를 제공하며, 원본 재생목록이 바뀌어도 결과가 유지되는 안정적 스냅샷 공유 URL을 지원합니다. (Gemini 요약은 선택 기능)',
@@ -42,6 +44,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/playlist-insight',
   },
   {
+    category: '데이터 서비스',
+    tier: 'featured',
     title: 'NutriRank – 가공식품 건강 등급·순위 서비스',
     description:
       '영양성분표를 직접 해석하지 않고도 음료·과자의 건강성을 건강 등급(A~E)과 카테고리 순위로 한눈에 확인하게 해 주는 서비스입니다. 식약처 「전국통합식품영양성분정보」 공개 데이터를 적재·정규화하고, 2023 Nutri-Score 알고리즘으로 건강 점수·등급·카테고리 순위를 사전 계산해 조회 시 실시간 연산 없이 즉시 응답합니다. 제품명 검색·필터, 등급 근거(기여 영양소)까지 보여주는 제품 상세, 카테고리별 순위, 분포·평균·상관·추세를 보는 집계 분석 대시보드를 제공합니다.',
@@ -55,6 +59,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/NutriRank',
   },
   {
+    category: '실서비스',
+    tier: 'featured',
     title: 'SignGPT – 실시간 수어 통역 AI 서비스',
     description:
       '청각장애인과 비장애인 간의 실시간 의사소통 격차를 줄이기 위해, 수어 영상 인식 딥러닝과 LLM 기반 자연어 생성·요약을 결합한 양방향 통역 서비스를 지향합니다. 카메라로 입력된 수어를 단어 단위로 인식해 자연스러운 문장·음성으로 변환하고, 반대로 텍스트·음성을 수어 애니메이션으로 출력해 수어만으로도 챗봇과 대화할 수 있는 환경을 제공합니다. 이를 통해 교육·고용·일상에서 청각장애인의 정보 접근성과 소통 기회를 넓히는 것을 목표로 합니다.',
@@ -62,6 +68,8 @@ export const projects = [
     link: 'https://www.signgpt.org/',
   },
   {
+    category: 'AI·데이터',
+    tier: 'practice',
     title: 'AI 뉴스 기반 종목 추천 시스템',
     description:
       '실시간 뉴스 기사에서 종목을 추출하고 KoBERT 기반 감성 분석으로 투자 유망 종목을 추천하는 시스템입니다. 네이버 뉴스 크롤링, 종목명 추출, 감정 분류, 점수 계산, DART 기업 정보 및 공시 연동까지 하나의 흐름으로 통합한 프로젝트입니다.',
@@ -75,6 +83,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/stock-news-ai',
   },
   {
+    category: '백엔드 학습',
+    tier: 'practice',
     title: '연락처 관리 앱 (Node.js & Sequelize)',
     description:
       'Sequelize ORM을 사용해 연락처를 관리하는 서버 사이드 애플리케이션입니다. Node.js 환경에서 모델·마이그레이션을 구성하고, RESTful 방식으로 연락처 생성/조회/수정/삭제를 처리하도록 설계했습니다. 추후 로그인 및 세션, 토큰 기반 인증, 암호화 등 보안 기능 확장을 고려한 구조로 구현했습니다.',
@@ -88,6 +98,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/contact-app',
   },
   {
+    category: '백엔드 학습',
+    tier: 'practice',
     title: '메모 관리 웹 애플리케이션 (Java)',
     description:
       'HTML과 Java 기반으로 구현한 메모 관리 웹 애플리케이션입니다. Gradle을 사용해 빌드 환경을 구성하고, 웹 인터페이스를 통해 메모를 작성·조회할 수 있도록 설계했습니다. 추후 인증, 데이터 영속화, 배포 자동화 등을 추가해 백엔드 역량을 확장할 수 있는 기반 프로젝트입니다.',
@@ -100,6 +112,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/memo',
   },
   {
+    category: '앱',
+    tier: 'practice',
     title: 'Flutter 앱 모음 포트폴리오',
     description:
       '플러터로 개발한 여러 개의 모바일 앱(번호 뽑기, 영화 박스오피스/검색, 급식 조회·평가, 타이머, 다이어리, 인스타그램 클론 등)을 한 페이지에서 체험할 수 있도록 구성한 포트폴리오 사이트입니다. 각 프로젝트는 상태 관리, 네트워크 통신, UI 구성 등 플러터 기본기를 학습하고 실습하기 위한 목적을 가지고 있습니다.',
@@ -107,13 +121,8 @@ export const projects = [
     link: 'https://eunkyo3.github.io/',
   },
   {
-    title: 'Vue 기반 개인 포트폴리오 웹사이트',
-    description:
-      'Vue 3와 Vite, Tailwind CSS로 구현 중인 개인 포트폴리오 웹사이트입니다. SPA 구조로 About, Skills, Experience, Projects 섹션 등을 구성하고 있으며, 반응형 레이아웃을 적용해 다양한 환경에서 일관된 사용자 경험을 제공하는 것을 목표로 하고 있습니다.',
-    tech: ['Vue 3', 'Vite', 'Tailwind CSS', 'TypeScript', 'JavaScript'],
-    repo: 'https://github.com/eunkyo3/Portfolio',
-  },
-  {
+    category: 'AI·비전',
+    tier: 'practice',
     title: 'BrainAI – OpenVINO 얼굴·나이·성별·감정 인식',
     description:
       'Intel OpenVINO 툴킷과 Open Model Zoo의 사전 학습 모델을 활용해 얼굴 검출, 나이·성별, 감정을 인식하는 프로젝트입니다. 정지 이미지에 대해 얼굴/나이/성별/감정을 분석하는 Jupyter Notebook과, 웹캠으로 실시간 얼굴을 검출하고 나이·성별을 추론하는 파이썬 스크립트(webcam_age_gender.py)를 제공해, Vision 기반 AI 파이프라인과 모델 배포 과정을 실습할 수 있습니다.',
@@ -126,6 +135,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/face-recognition',
   },
   {
+    category: 'AI·생성',
+    tier: 'practice',
     title: 'AI Video Studio – 실사 스타일 영상 생성',
     description:
       'RTX 3060 Ti 로컬 환경에서 실사(Photorealistic) 스타일의 동영상을 생성하기 위해 최적화된 올인원 솔루션입니다. Streamlit 기반의 GUI를 제공하며, AnimateDiff(생성), Motion LoRA(카메라 무빙), RIFE(보간), Real-ESRGAN(업스케일링) 기술이 파이프라인으로 연결되어 있습니다. 텍스트 프롬프트 입력부터 고화질 영상 파일 생성까지의 전 과정을 자동화하여, VRAM 8GB 한계를 극복하기 위한 CPU Offload 최적화를 적용했습니다.',
@@ -139,6 +150,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/gen-ai-video',
   },
   {
+    category: '자동화',
+    tier: 'practice',
     title: '학교 급식 정보 카카오톡 자동 전송 시스템',
     description:
       '교육부 NEIS(Open API)에서 학교 급식 정보를 조회하여 카카오톡 나에게 메시지로 매일 아침 자동 전송하는 파이썬 스크립트입니다. NEIS API 연동으로 급식 메뉴를 가져오고, 카카오톡 OAuth 인증을 통해 액세스 토큰을 관리하며, schedule 라이브러리를 활용해 매일 08:30에 자동으로 급식 정보를 전송합니다. 환경변수를 통한 API 키 관리와 토큰 자동 갱신 기능을 포함하고 있습니다.',
@@ -151,6 +164,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/python_meals_to_kakao',
   },
   {
+    category: '백엔드 아키텍처',
+    tier: 'featured',
     title: 'Synapse Commerce – 하이브리드 커머스 검색·재고 관리 플랫폼',
     description:
       'NestJS 기반 CQRS·이벤트 드리븐 아키텍처로 설계된 커머스 검색·재고 관리 플랫폼입니다. PostgreSQL을 쓰기 DB, Elasticsearch를 읽기 DB로 분리해 상품 검색 성능을 최적화하고, Redis를 캐시·레이트 리미팅·세션 스토어로 활용해 고가용성을 목표로 합니다.',
@@ -164,6 +179,8 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/Synapse-Commerce',
   },
   {
+    category: '백엔드·풀스택',
+    tier: 'featured',
     title: 'On-Quest – 게임형 온보딩 플랫폼',
     description:
       '신입 사원의 조직 적응을 돕기 위해 퀘스트 형태의 과제를 부여하고, 사수(관리자)가 증빙을 검토하며 n8n을 통해 Slack으로 실시간 알림을 보내는 MVP입니다. companyCode 기반 멀티 테넌트와 admin/employee 역할 분리, 퀘스트 v2 상태 흐름(대기→착수→검토 대기→완료/반려), PostgreSQL bytea 증빙 저장, HMAC 서명 웹훅·JWT refresh·마감 Cron 알림 등 백엔드·자동화·프론트를 Docker Compose로 일괄 구성했습니다.',
@@ -188,42 +205,24 @@ export const projects = [
     repo: 'https://github.com/eunkyo3/on-quest',
   },
   {
-    title: 'MediScan – 시니어 친화형 알약 인식 앱',
+    category: '풀스택 제품',
+    tier: 'featured',
+    title: 'MediScan – 시니어 친화형 알약 인식 서비스',
     description:
-      '60~80대 시니어를 위한 알약 인식 모바일 앱으로, 카메라로 촬영한 알약을 YOLOv8·OCR로 인식해 Spring Boot 서버에서 약 정보(API)를 조회합니다. 큰 글씨, 음성 안내(TTS), 최근 검색 기록, 다중 알약 인식 등 실버 UX에 최적화된 플로우를 설계했습니다.',
-    tech: ['Flutter', 'Dart', 'Riverpod', 'GoRouter', 'Spring Boot API', 'SharedPreferences', 'TFLite', 'YOLOv8', 'OCR'],
+      '카메라로 촬영한 알약을 YOLOv8·OCR로 인식해 약 정보를 조회하는 시니어(60~80대) 친화 모바일 서비스입니다. 온디바이스 추론·큰 글씨·음성 안내(TTS)를 갖춘 Flutter 앱, YOLOv8 Nano 알약 탐지 모델 학습·TFLite 경량화, 식약처 공공데이터를 동기화해 문자·모양·색상으로 알약을 식별하는 Spring Boot API까지 앱·AI·백엔드 전 계층을 직접 설계·구현했습니다.',
+    tech: ['Flutter', 'Dart', 'Riverpod', 'YOLOv8', 'TFLite', 'OCR', 'Spring Boot', 'PostgreSQL', 'OpenFeign', 'PyTorch'],
     problemSolving: [
-      '60~80대 시니어의 사용성 저하를, Silver Care 디자인(큰 글씨·1.2배 배율·최소 56px 터치·ko-KR TTS·햅틱)으로 해결 (app_theme.dart, tts_button.dart)',
-      '알약 추론의 UI 멈춤·프라이버시를, YOLOv8n TFLite를 별도 아이솔레이트(IsolateInterpreter)에서 온디바이스 실행하고 신뢰도 임계·NMS를 직접 구현 (yolo_detector.dart)',
-      '한 번의 촬영으로 여러 알약 인식을, 탐지 영역을 crop해 OCR→검색을 병렬(Future.wait) 처리하고 알약별 성공·미발견·OCR실패 상태를 부여 (scan_processor.dart)',
-      'OCR·네트워크 실패·리소스 누수로 인한 중단을, 실패 지점별 상태 흡수와 dispose 정리·mounted 가드로 방어',
+      '[앱] 시니어 사용성 저하를 Silver Care 디자인(큰 글씨·1.2배 배율·최소 56px 터치·ko-KR TTS·햅틱)으로 해결 (app_theme.dart)',
+      '[앱] 추론 시 UI 멈춤·프라이버시를, YOLOv8n TFLite를 별도 아이솔레이트에서 온디바이스 실행하고 신뢰도 임계·NMS를 직접 구현 (yolo_detector.dart)',
+      '[AI] 모바일에 대형 모델이 부적합한 문제를, YOLOv8 Nano 파인튜닝과 TFLite 경량화 파이프라인, CUDA·CPU 자동 폴백으로 해결 (train.py)',
+      '[서버] 매 검색마다 외부 API를 호출해 외부 장애가 전파되는 리스크를, 기동 시 로컬 DB 선동기화 후 로컬만 조회하도록 경로 분리 (PillDataSyncService.java)',
+      '[서버] 공공데이터 items가 객체·배열로 오는 비일관 스키마 역직렬화 오류를 커스텀 Deserializer로 방어 (PillItemsDeserializer.java)',
     ],
-    repo: 'https://github.com/eunkyo3/medi-scan-client',
-  },
-  {
-    title: 'MediScan AI Model Training (YOLOv8)',
-    description:
-      'MediScan 앱의 핵심인 알약 탐지 모델을 YOLOv8 Nano 기반으로 파인튜닝하고, 모바일 배포를 위해 TFLite(.tflite) 포맷으로 내보내는 학습 파이프라인입니다. Roboflow에서 받은 알약 데이터셋을 사용하며, GPU(CUDA) 환경에서의 학습과 모델 경량화에 초점을 맞추고 있습니다.',
-    tech: ['Python', 'YOLOv8', 'Ultralytics', 'PyTorch', 'TensorFlow Lite', 'Roboflow'],
-    problemSolving: [
-      '모바일 온디바이스 추론에 대형 모델이 부적합한 문제를, YOLOv8 Nano 파인튜닝과 TFLite export 경량화 파이프라인으로 해결 (train.py)',
-      'pip torch가 CPU 전용이라 GPU 학습이 안 되는 리스크를, CUDA 전용 인덱스 설치 가이드와 cuda 가용성 검증·CPU 자동 폴백으로 환경 차이로 인한 중단 방지',
-      'Windows 다중 워커 학습의 multiprocessing 오류를, main 가드와 try/except로 스크립트 전체가 죽지 않도록 방어',
+    links: [
+      { label: '앱 (Flutter)', href: 'https://github.com/eunkyo3/medi-scan-client' },
+      { label: 'AI 모델 (YOLOv8)', href: 'https://github.com/eunkyo3/medi-scan-ai-model-training-YOLOv8' },
+      { label: '서버 (Spring Boot)', href: 'https://github.com/eunkyo3/medi-scan-server' },
     ],
-    repo: 'https://github.com/eunkyo3/medi-scan-ai-model-training-YOLOv8',
-  },
-  {
-    title: 'MediScan Server – 알약 식별 Spring Boot API',
-    description:
-      '식약처 의약품 식별 공공데이터를 동기화해 알약 식별 검색 API를 제공하는 Spring Boot 서버입니다. 문자 식별값(print), 모양, 색상 기준으로 약 정보를 조회할 수 있고, H2/PostgreSQL을 지원하며 OpenFeign으로 공공데이터 API를 연동했습니다. MediScan 모바일 앱의 백엔드로 동작합니다.',
-    tech: ['Java', 'Spring Boot', 'H2', 'PostgreSQL', 'OpenFeign', 'Gradle'],
-    problemSolving: [
-      '공공데이터 API의 items가 1건이면 객체·다건이면 배열로 오는 비일관 스키마로 역직렬화가 깨지는 문제를, 커스텀 Deserializer로 List 통일과 JsonAlias로 방어 (PillItemsDeserializer.java)',
-      '매 검색마다 외부 API를 호출해 외부 장애가 사용자 응답에 전파되는 리스크를, 기동 시 로컬 DB 선동기화 후 검색은 로컬만 조회하도록 경로 분리 (PillDataSyncService.java)',
-      '재기동 시 중복 적재를, 비어있을 때만 동기화하는 멱등 처리와 종료 조건 3중 페이지네이션으로 해결',
-      'H2(로컬)·PostgreSQL(운영) 환경 차 혼선을, dev/prod 프로파일 분리와 환경변수 주입, print·모양·색상 인덱스·동적 JPQL로 정리 (application-*.yml)',
-    ],
-    repo: 'https://github.com/eunkyo3/medi-scan-server',
   },
 ]
 
