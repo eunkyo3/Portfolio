@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
 import { ScrollProgress } from './components/ScrollProgress'
+import { ParticleField } from './components/ParticleField'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               WebkitMaskImage: 'radial-gradient(ellipse at center, black, transparent 75%)',
             }}
           />
+          <ParticleField />
         </div>
         <Navbar />
         <main className="flex-1 py-10">

@@ -1,4 +1,5 @@
 import { useI18n } from '../contexts/I18nContext'
+import { TiltCard } from './TiltCard'
 
 type ProjectLink = { label: string; href: string }
 
@@ -23,7 +24,7 @@ const ExternalIcon = () => (
 export function ProjectCard({ title, description, tech, link, repo, links, problemSolving, category, compact }: ProjectCardProps) {
   const { t } = useI18n()
   return (
-    <div className={`card-glass card-glass-hover h-full flex flex-col ${compact ? 'p-4' : 'p-5 sm:p-6'}`}>
+    <TiltCard className={`card-glass h-full flex flex-col ${compact ? 'p-4' : 'p-5 sm:p-6'}`}>
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           {category && (
@@ -112,6 +113,6 @@ export function ProjectCard({ title, description, tech, link, repo, links, probl
           </ul>
         </details>
       )}
-    </div>
+    </TiltCard>
   )
 }

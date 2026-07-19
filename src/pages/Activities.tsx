@@ -1,6 +1,7 @@
 import { useContent } from '../data/useContent'
 import { useI18n } from '../contexts/I18nContext'
 import { Reveal } from '../components/Reveal'
+import { TiltCard } from '../components/TiltCard'
 
 export function Activities() {
   const { activities, awards } = useContent()
@@ -23,12 +24,12 @@ export function Activities() {
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {activities.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>
-              <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
+              <TiltCard className="card-glass h-full p-5 sm:p-6 flex flex-col">
                 <h4 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">{a.title}</h4>
                 <p className="mt-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">
                   {a.detail}
                 </p>
-              </div>
+              </TiltCard>
             </Reveal>
           ))}
         </div>
@@ -39,12 +40,12 @@ export function Activities() {
         <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 items-stretch">
           {awards.map((a, idx) => (
             <Reveal key={a.title + a.detail} delay={idx * 0.08}>
-              <div className="card-glass card-glass-hover h-full p-5 sm:p-6 flex flex-col">
+              <TiltCard className="card-glass h-full p-5 sm:p-6 flex flex-col">
                 <h4 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">{a.title}</h4>
                 <p className="mt-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">
                   {a.detail}
                 </p>
-              </div>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { useContent } from '../data/useContent'
 import { useI18n } from '../contexts/I18nContext'
 import { Reveal } from '../components/Reveal'
+import { TiltCard } from '../components/TiltCard'
 
 export function Certificates() {
   const { certificates } = useContent()
@@ -23,14 +24,14 @@ export function Certificates() {
       <div className="grid sm:grid-cols-2 gap-5 lg:gap-6">
         {certificates.map((c, idx) => (
           <Reveal key={c.title} delay={idx * 0.08}>
-            <div className="card-glass card-glass-hover relative overflow-hidden p-5 sm:p-6">
+            <TiltCard className="card-glass relative overflow-hidden p-5 sm:p-6">
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-400" />
               <h3 className="mt-2 text-base sm:text-lg font-semibold text-neutral-900 dark:text-white">{c.title}</h3>
               <p className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                 {t.certificates.issuer} <span className="font-medium text-neutral-900 dark:text-neutral-100">{c.issuer}</span>
               </p>
               <p className="mt-1 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">{t.certificates.date} {c.date}</p>
-            </div>
+            </TiltCard>
           </Reveal>
         ))}
       </div>
