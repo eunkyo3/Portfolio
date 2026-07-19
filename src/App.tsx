@@ -6,7 +6,7 @@ import { ScrollProgress } from './components/ScrollProgress'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
       <div className="min-h-full flex flex-col relative">
         <ScrollProgress />
         {/* aurora background layer for all pages */}
